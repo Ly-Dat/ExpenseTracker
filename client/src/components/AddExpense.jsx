@@ -65,7 +65,7 @@ function AddExpense() {
         throw new Error('No token found. Please log in.');
       }
       const res = await axios.post(
-        'http://localhost:500/api/expenses',
+        'https://expensetracker-backend-p2cn.onrender.com/api/expenses',
         formData,
         {
           headers: {

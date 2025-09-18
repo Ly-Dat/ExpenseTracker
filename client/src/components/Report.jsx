@@ -70,7 +70,7 @@ function Report() {
       const token = localStorage.getItem("token");
       try {
         const res = await axios.post(
-          `http://localhost:500/api/auth/reportData?month=${selectedMonth}&year=${selectedYear}`,
+          `https://expensetracker-backend-p2cn.onrender.com/api/auth/reportData?month=${selectedMonth}&year=${selectedYear}`,
           {},
           { headers: { Authorization: `Bearer ${token}` } }
         );
@@ -92,7 +92,7 @@ function Report() {
 
     const token = localStorage.getItem("token");
     try {
-      await axios.delete(`http://localhost:500/api/auth/${type}/${id}`, {
+      await axios.delete(`https://expensetracker-backend-p2cn.onrender.com/api/auth/${type}/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       if (type === "income") {
@@ -123,7 +123,7 @@ function Report() {
     const token = localStorage.getItem("token");
     try {
       const res = await axios.put(
-        `http://localhost:500/api/auth/${type}/${id}`,
+        `https://expensetracker-backend-p2cn.onrender.com/api/auth/${type}/${id}`,
         { ...editData, value: Number(editData.value) },
         { headers: { Authorization: `Bearer ${token}` } }
       );

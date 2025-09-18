@@ -33,7 +33,7 @@ function Circle() {
 
       // Lấy danh sách người dùng để tìm userId từ email
       const userRes = await axios.post(
-        "http://localhost:500/api/auth/userData",
+        "https://expensetracker-backend-p2cn.onrender.com/api/auth/userData",
         {},
         {
           headers: { Authorization: `Bearer ${adminToken}` },
@@ -45,7 +45,7 @@ function Circle() {
 
       // Lấy chi phí của người dùng bằng cách giả lập yêu cầu với userId
       const expensesRes = await axios.post(
-        "http://localhost:500/api/auth/expensesData",
+        "https://expensetracker-backend-p2cn.onrender.com/api/auth/expensesData",
         {},
         {
           headers: { Authorization: `Bearer ${adminToken}` },

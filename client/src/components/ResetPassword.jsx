@@ -24,7 +24,7 @@ function ResetPassword() {
       return;
     }
     try {
-      const res = await axios.post("http://localhost:500/api/auth/reset-password", {
+      const res = await axios.post("https://expensetracker-backend-p2cn.onrender.com/api/auth/reset-password", {
         email,
         password,
       });

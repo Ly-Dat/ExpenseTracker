@@ -16,7 +16,7 @@ export const fetchExpenseData = async (currentMonth) => {
     const token = localStorage.getItem('token');
     if (!token) throw new Error('No token found. Please log in.');
     const res = await axios.post(
-      'http://localhost:500/api/auth/expensesData',
+      'https://expensetracker-backend-p2cn.onrender.com/api/auth/expensesData',
       {},
       {
         headers: { Authorization: `Bearer ${token}` },

@@ -42,7 +42,7 @@ function Admin() {
         throw new Error('No token found. Please log in.');
       }
       const res1 = await axios.post(
-        'http://localhost:500/api/auth/incomeData',
+        'https://expensetracker-backend-p2cn.onrender.com/api/auth/incomeData',
         {},
         {
           headers: {
@@ -51,14 +51,14 @@ function Admin() {
         }
       );
       const res2 = await axios.post(
-        'http://localhost:500/api/auth/expensesData',
+        'https://expensetracker-backend-p2cn.onrender.com/api/auth/expensesData',
         {},
         {
           headers: { Authorization: `Bearer ${token}` },
         }
       );
       const res3 = await axios.post(
-        'http://localhost:500/api/auth/userData',
+        'https://expensetracker-backend-p2cn.onrender.com/api/auth/userData',
         {},
         {
           headers: { Authorization: `Bearer ${token}` },
@@ -107,7 +107,7 @@ const handleDelete = async (id) => {
     }
     const token = localStorage.getItem("token");
     try {
-      await axios.delete(`http://localhost:500/api/auth/${id}`, {
+      await axios.delete(`https://expensetracker-backend-p2cn.onrender.com/api/auth/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       window.location.reload();

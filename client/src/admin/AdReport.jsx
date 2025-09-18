@@ -73,7 +73,7 @@ function Report() {
 
       // Lấy danh sách người dùng để tìm userId từ email
       const userRes = await axios.post(
-        "http://localhost:500/api/auth/userData",
+        "https://expensetracker-backend-p2cn.onrender.com/api/auth/userData",
         {},
         {
           headers: { Authorization: `Bearer ${adminToken}` },
@@ -86,7 +86,7 @@ function Report() {
 
       // Lấy dữ liệu thu nhập và chi phí của người dùng
       const reportRes = await axios.post(
-        `http://localhost:500/api/auth/reportData?month=${month}&year=${year}`,
+        `https://expensetracker-backend-p2cn.onrender.com/api/auth/reportData?month=${month}&year=${year}`,
         {},
         {
           headers: { Authorization: `Bearer ${adminToken}` },
@@ -122,7 +122,7 @@ function Report() {
 
     try {
       
-      await axios.delete(`http://localhost:500/api/auth/${type}/${id}`, {
+      await axios.delete(`https://expensetracker-backend-p2cn.onrender.com/api/auth/${type}/${id}`, {
         headers: { Authorization: `Bearer ${adminToken}` },
       });
       if (type === "income") {
@@ -152,7 +152,7 @@ function Report() {
     }
     try {
       const res = await axios.put(
-        `http://localhost:500/api/auth/${type}/${id}`,
+        `https://expensetracker-backend-p2cn.onrender.com/api/auth/${type}/${id}`,
         { ...editData, value: Number(editData.value) },
         { headers: { Authorization: `Bearer ${adminToken}` } }
       );

@@ -29,7 +29,7 @@ function Transactions() {
           console.error('No token found');
           return;
         }
-        const res = await axios.get('http://localhost:500/api/expenses', {
+        const res = await axios.get('https://expensetracker-backend-p2cn.onrender.com/api/expenses', {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -85,7 +85,7 @@ function Transactions() {
 
     try {
       const token = localStorage.getItem('token');
-      await axios.put(`http://localhost:500/api/auth/expense/${id}`, 
+      await axios.put(`https://expensetracker-backend-p2cn.onrender.com/api/auth/expense/${id}`, 
         { checked: newChecked },
         {
           headers: {

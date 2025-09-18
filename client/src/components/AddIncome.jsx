@@ -66,7 +66,7 @@ function AddIncome() {
       }
 
       const res = await axios.post(
-        'http://localhost:500/api/income',
+        'https://expensetracker-backend-p2cn.onrender.com/api/income',
         formData,
         {
           headers: {

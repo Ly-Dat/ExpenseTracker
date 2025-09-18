@@ -15,7 +15,7 @@ function Stats() {
       }
 
       const res1 = await axios.post(
-        'http://localhost:500/api/auth/incomeData',
+        'https://expensetracker-backend-p2cn.onrender.com/api/auth/incomeData',
         {},
         {
           headers: {
@@ -24,7 +24,7 @@ function Stats() {
         }
       );
       const res2 = await axios.post(
-        'http://localhost:500/api/auth/expensesData',
+        'https://expensetracker-backend-p2cn.onrender.com/api/auth/expensesData',
         {},
         {
           headers: { Authorization: `Bearer ${token}` },

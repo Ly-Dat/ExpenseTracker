@@ -19,7 +19,7 @@ function Register() {
       return;
     }
     try {
-      await axios.post("http://localhost:500/api/auth/register", {
+      await axios.post("https://expensetracker-backend-p2cn.onrender.com/api/auth/register", {
         email,
         password,
       });
