@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+
+.background{
+    width: 100%;
+}
+.background img{
+    width: 100vw; 
+    height: 100vh;
+    object-fit: cover; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+}
+.cover{
+    position: fixed;
+    width: 100vw; 
+    height: 100vh; 
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.logo{
+    position: absolute;
+    object-fit: cover;
+    top: 30px;
+    left: 30px;
+}
+.logo img{
+    width: 250px;
+}
+
+.wrapper {
+    position: absolute;
+    width: 420px;
+    border: 2px solid rgba(255, 255, 255, 0.4); 
+    backdrop-filter: blur(20px); 
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border-radius: 10px;
+    padding: 30px 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.wrapper h1 {
+    font-size: 36px;
+    text-align: center;
+    color: #ebe6e6;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 3px rgba(177, 159, 159, 0.6);
+}
+
+.wrapper .input_box {
+    position: relative;;
+    width: 100%;
+    height: 50px;
+    margin-top: 35px;
+}
+
+.input_box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+    transition: all 0.3s ease;
+}
+
+.input_box input::placeholder {
+    color: #fff;
+}
+
+.input_box input:focus,
+.input_box input:valid {
+    border-color: #fff;
+    transform: scale(1.02);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.input_box i {
+    position: absolute; /* Chuyển sang absolute để di chuyển chính xác */
+    right: 20px; /* Vị trí ban đầu của biểu tượng */
+    top: 25px; /* Căn giữa theo chiều dọc */
+    transform: translateY(-50%); /* Duy trì căn giữa */
+    font-size: 25px;
+    transition: all 0.3s ease; /* Hiệu ứng mượt */
+}
+
+.input_box input:focus ~ i,
+.input_box input:valid ~ i {
+    right: 10px; /* Di chuyển biểu tượng sang phải */
+    color: #fff;
+    transform: translateY(-50%) scale(1.2); /* Tăng kích thước nhẹ khi di chuyển */
+}
+
+.wrapper .remember_forgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin: 15px 0 15px;
+}
+
+.remember_forgot label input {
+    accent-color: #fff;
+    margin-right: 3px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.remember_forgot a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.wrapper .btn {
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    transition: 0.5s ease;
+    margin-top: 30px;
+}
+
+.btn:hover {
+    color: white;
+    background: linear-gradient(to right, #E55D87, #5FC3E4);
+}
+
+.wrapper .register_link {
+    font-size: 14px;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+
+.register_link a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.register_link a:hover {
+    text-decoration: underline;
+}
+.input_box.password_box i {
+  cursor: pointer;
+}
