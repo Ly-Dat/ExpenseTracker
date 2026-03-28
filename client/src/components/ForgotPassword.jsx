@@ -14,7 +14,7 @@ function ForgotPassword() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("https://expense-tracker-back-bice.vercel.app/api/auth/forgot-password", {
+      const res = await axios.post("https://expensetracker-backend-p2cn.onrender.com/api/auth/forgot-password", {
         email,
       });
       setMessage(res.data.msg);

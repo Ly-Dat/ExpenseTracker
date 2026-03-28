@@ -17,7 +17,7 @@ function EnterVerificationCode() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("https://expense-tracker-back-bice.vercel.app/api/auth/verify-code", {
+      const res = await axios.post("https://expensetracker-backend-p2cn.onrender.com/api/auth/verify-code", {
         email,
         code,
       });

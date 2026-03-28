@@ -14,7 +14,7 @@ export const useIncomeData = () => {
         if (!token) throw new Error("No token found. Please log in.");
 
         const response = await axios.post(
-          "https://expense-tracker-back-bice.vercel.app/api/auth/incomeData",
+          "https://expensetracker-backend-p2cn.onrender.com/api/auth/incomeData",
           {},
           { headers: { Authorization: `Bearer ${token}` } }
         );

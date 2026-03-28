@@ -19,7 +19,7 @@ function Register() {
       return;
     }
     try {
-      await axios.post("https://expense-tracker-back-bice.vercel.app/api/auth/register", {
+      await axios.post("https://expensetracker-backend-p2cn.onrender.com/api/auth/register", {
         email,
         password,
       });

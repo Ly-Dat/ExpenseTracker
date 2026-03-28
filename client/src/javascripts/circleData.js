@@ -16,7 +16,7 @@ export const fetchExpenseData = async (currentMonth) => {
     const token = localStorage.getItem('token');
     if (!token) throw new Error('No token found. Please log in.');
     const res = await axios.post(
-      'https://expense-tracker-back-bice.vercel.app/api/auth/expensesData',
+      'https://expensetracker-backend-p2cn.onrender.com/api/auth/expensesData',
       {},
       {
         headers: { Authorization: `Bearer ${token}` },
