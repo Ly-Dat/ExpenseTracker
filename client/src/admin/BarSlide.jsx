@@ -33,7 +33,7 @@ function BarChart() {
 
       // Fetch user ID by email
       const userRes = await axios.post(
-        "https://expensetracker-backend-p2cn.onrender.com/api/auth/userData",
+        "https://expense-tracker-back-bice.vercel.app/api/auth/userData",
         {},
         { headers: { Authorization: `Bearer ${adminToken}` } }
       );
@@ -43,7 +43,7 @@ function BarChart() {
 
       // Fetch incomes for the user
       const incomesRes = await axios.post(
-        "https://expensetracker-backend-p2cn.onrender.com/api/auth/incomeData",
+        "https://expense-tracker-back-bice.vercel.app/api/auth/incomeData",
         {},
         { headers: { Authorization: `Bearer ${adminToken}` } }
       );

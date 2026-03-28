@@ -66,7 +66,7 @@ function AddIncome() {
       }
 
       const res = await axios.post(
-        'https://expensetracker-backend-p2cn.onrender.com/api/income',
+        'https://expense-tracker-back-bice.vercel.app/api/income',
         formData,
         {
           headers: {

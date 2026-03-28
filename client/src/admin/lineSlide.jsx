@@ -66,7 +66,7 @@ function LineChart() {
 
       // Fetch user ID by email
       const userRes = await axios.post(
-        "https://expensetracker-backend-p2cn.onrender.com/api/auth/userData",
+        "https://expense-tracker-back-bice.vercel.app/api/auth/userData",
         {},
         { headers: { Authorization: `Bearer ${adminToken}` } }
       );
@@ -77,12 +77,12 @@ function LineChart() {
       // Fetch incomes and expenses for the user
       const [incomesRes, expensesRes] = await Promise.all([
         axios.post(
-          "https://expensetracker-backend-p2cn.onrender.com/api/auth/incomeData",
+          "https://expense-tracker-back-bice.vercel.app/api/auth/incomeData",
           {},
           { headers: { Authorization: `Bearer ${adminToken}` } }
         ),
         axios.post(
-          "https://expensetracker-backend-p2cn.onrender.com/api/auth/expensesData",
+          "https://expense-tracker-back-bice.vercel.app/api/auth/expensesData",
           {},
           { headers: { Authorization: `Bearer ${adminToken}` } }
         ),
