@@ -7,6 +7,7 @@
     }
   ],
   "routes": [
+    { "src": "/api/(.*)", "dest": "https://expensetracker-backend-p2cn.onrender.com/api/$1" },
     { "src": "/static/(.*)", "dest": "/static/$1" },
     { "src": "/(.*)", "dest": "/index.html" }
   ]
