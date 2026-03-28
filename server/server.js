@@ -17,16 +17,29 @@ app.use('/api/income', incomeRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api/expenses', expenseRoutes);
 
+// health check
+app.get('/health', (req, res) => res.json({ status: 'ok' }));
+
 // MongoDB connection
 const uri = process.env.MONGO_URI;
-mongoose
-  .connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => console.log('Connected to MongoDB successfully!'))
-  .catch((err) => console.error('Failed to connect to MongoDB:', err.message));
 
-// start server
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, "0.0.0.0", () => {
-  console.log(`Server running on port ${PORT}`);
-});
-// app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+let isConnected = false;
+
+const connectDB = async () => {
+  if (isConnected) return;
+  try {
+    await mongoose.connect(uri, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
+    isConnected = true;
+    console.log('Connected to MongoDB successfully!');
+  } catch (err) {
+    console.error('Failed to connect to MongoDB:', err.message);
+  }
+};
+
+connectDB();
+
+// Bắt buộc để Vercel nhận diện là serverless
+module.exports = app;
