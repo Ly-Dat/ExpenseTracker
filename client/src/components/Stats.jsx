@@ -15,7 +15,7 @@ function Stats() {
       }
 
       const res1 = await axios.post(
-        'https://expensetracker-backend-p2cn.onrender.com/api/auth/incomeData',
+        'https://expense-tracker-back-bice.vercel.app/api/auth/incomeData',
         {},
         {
           headers: {
@@ -24,7 +24,7 @@ function Stats() {
         }
       );
       const res2 = await axios.post(
-        'https://expensetracker-backend-p2cn.onrender.com/api/auth/expensesData',
+        'https://expense-tracker-back-bice.vercel.app/api/auth/expensesData',
         {},
         {
           headers: { Authorization: `Bearer ${token}` },

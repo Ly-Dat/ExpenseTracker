@@ -13,12 +13,12 @@ export const useChartData = () => {
 
         const [incomeRes, expenseRes] = await Promise.all([
           axios.post(
-            "https://expensetracker-backend-p2cn.onrender.com/api/auth/incomeData",
+            "https://expense-tracker-back-bice.vercel.app/api/auth/incomeData",
             {},
             { headers: { Authorization: `Bearer ${token}` } }
           ),
           axios.post(
-            "https://expensetracker-backend-p2cn.onrender.com/api/auth/expensesData",
+            "https://expense-tracker-back-bice.vercel.app/api/auth/expensesData",
             {},
             { headers: { Authorization: `Bearer ${token}` } }
           ),

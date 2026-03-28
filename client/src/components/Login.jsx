@@ -13,7 +13,7 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('https://expensetracker-backend-p2cn.onrender.com/api/auth/login', {
+      const res = await axios.post('https://expense-tracker-back-bice.vercel.app/api/auth/login', {
         email,
         password,
       });

@@ -25,7 +25,7 @@ if (loginForm) {
     const password = passwordInput.value.trim();
 
     try {
-      const response = await fetch('https://expensetracker-backend-p2cn.onrender.com//api/login', {
+      const response = await fetch('https://expense-tracker-back-bice.vercel.app/api/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, password }),
@@ -121,7 +121,7 @@ function logout() {
 async function fetchExpenses() {
   const token = localStorage.getItem('token');
   try {
-    const response = await fetch('https://expensetracker-backend-p2cn.onrender.com/api/expenses', {
+    const response = await fetch('https://expense-tracker-back-bice.vercel.app/api/expenses', {
       method: 'GET',
       headers: { Authorization: `Bearer ${token}` },
     });
@@ -183,8 +183,8 @@ async function addOrUpdateExpense(formData, expenseId = null) {
   const token = localStorage.getItem('token');
   const method = expenseId ? 'PUT' : 'POST';
   const url = expenseId
-    ? `https://expensetracker-backend-p2cn.onrender.com/api/expenses/${expenseId}`
-    : 'https://expensetracker-backend-p2cn.onrender.com/api/expenses';
+    ? `https://expense-tracker-back-bice.vercel.app/api/expenses/${expenseId}`
+    : 'https://expense-tracker-back-bice.vercel.app/api/expenses';
 
   try {
     const response = await fetch(url, {
@@ -213,7 +213,7 @@ async function addOrUpdateExpense(formData, expenseId = null) {
 async function deleteExpense(expenseId) {
   const token = localStorage.getItem('token');
   try {
-    const response = await fetch(`https://expensetracker-backend-p2cn.onrender.com/api/expenses/${expenseId}`, {
+    const response = await fetch(`https://expense-tracker-back-bice.vercel.app/api/expenses/${expenseId}`, {
       method: 'DELETE',
       headers: { Authorization: `Bearer ${token}` },
     });
@@ -234,7 +234,7 @@ async function deleteExpense(expenseId) {
 async function editExpense(expenseId) {
   const token = localStorage.getItem('token');
   try {
-    const response = await fetch(`https://expensetracker-backend-p2cn.onrender.com/api/expenses`, {
+    const response = await fetch(`https://expense-tracker-back-bice.vercel.app/api/expenses`, {
       method: 'GET',
       headers: { Authorization: `Bearer ${token}` },
     });

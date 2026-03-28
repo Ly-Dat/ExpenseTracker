@@ -70,7 +70,7 @@ function Report() {
       const token = localStorage.getItem("token");
       try {
         const res = await axios.post(
-          `https://expensetracker-backend-p2cn.onrender.com/api/auth/reportData?month=${selectedMonth}&year=${selectedYear}`,
+          `https://expense-tracker-back-bice.vercel.app/api/auth/reportData?month=${selectedMonth}&year=${selectedYear}`,
           {},
           { headers: { Authorization: `Bearer ${token}` } }
         );
@@ -92,7 +92,7 @@ function Report() {
 
     const token = localStorage.getItem("token");
     try {
-      await axios.delete(`https://expensetracker-backend-p2cn.onrender.com/api/auth/${type}/${id}`, {
+      await axios.delete(`https://expense-tracker-back-bice.vercel.app/api/auth/${type}/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       if (type === "income") {
@@ -123,7 +123,7 @@ function Report() {
     const token = localStorage.getItem("token");
     try {
       const res = await axios.put(
-        `https://expensetracker-backend-p2cn.onrender.com/api/auth/${type}/${id}`,
+        `https://expense-tracker-back-bice.vercel.app/api/auth/${type}/${id}`,
         { ...editData, value: Number(editData.value) },
         { headers: { Authorization: `Bearer ${token}` } }
       );
